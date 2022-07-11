@@ -1,2 +1,2 @@
-# Thorium_NetLog_Viewer
+# Thorium NetLog Viewer
 Fork of the Chromium NetLog Viewer for Thorium.rocks
