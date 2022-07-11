@@ -8,4 +8,4 @@ The latest version of the Thorium Net Log Viewer can be accessed at: [netlog.htm
 
 The latest version of the Chromium Net Log Viewer can be accessed at: [https://netlog-viewer.appspot.com/](https://netlog-viewer.appspot.com/)
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to modify and run locally, or report bugs.
+See [CONTRIBUTING.md](https://github.com/Alex313031/Thorium_NetLog_Viewer/blob/main/CONTRIBUTING.md) for details on how to modify and run locally, or report bugs.
