@@ -1,0 +1,20 @@
+{
+  "name": "thorium-netlog-viewer",
+  "appName": "Thorium NetLog Viewer",
+  "applicationId": "ThoriumNetLogViewer",
+  "version": "0.0.2",
+  "description": "Native Chromium NetLog Viewer Application with some modifications.",
+  "author": "Alex313031",
+  "license": "BSD-3-Clause",
+  "repository": "https://github.com/Alex313031/Thorium_NetLog_Viewer",
+  "main": "./index.js",
+  "scripts": {
+    "test": "echo \"Error: No test specified\" && exit 1",
+    "clean": "rm -r -f -v node_modules",
+    "start": "../node_modules/electron/dist/electron .",
+    "winstart": "..\\node_modules\\electron\\dist\\electron ."
+  },
+  "devDependencies": {
+    "electron": "22.3.7"
+  }
+}

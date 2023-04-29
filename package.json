@@ -1,0 +1,67 @@
+{
+  "name": "thorium-netlog-viewer",
+  "appName": "Thorium NetLog Viewer",
+  "applicationId": "ThoriumNetLogViewer",
+  "version": "0.0.2",
+  "description": "Native Chromium NetLog Viewer Application with some modifications.",
+  "author": "Alex313031",
+  "license": "BSD-3-Clause",
+  "repository": "https://github.com/Alex313031/Thorium_NetLog_Viewer",
+  "main": "./netlog_viewer/index.js",
+  "scripts": {
+    "test": "echo \"Error: No test specified\" && exit 1",
+    "clean": "rm -r -f -v node_modules && rm -r -f dist/* && cd netlog_viewer && npm run clean",
+    "distclean": "rm -r -f dist/*",
+    "build": "electron-builder --dir",
+    "dist": "electron-builder",
+    "start": "cd netlog_viewer && npm run start",
+    "winstart": "cd netlog_viewer && npm run winstart",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "devDependencies": {
+    "electron": "22.3.7",
+    "electron-builder": "^22.14.13"
+  },
+  "build": {
+    "electronVersion": "22.3.7",
+    "extraFiles": [
+      {
+        "from": "netlog_viewer/icon64.png"
+      }
+    ],
+    "appId": "thorium-netlog-viewer",
+    "files": [
+      "**/*"
+    ],
+    "linux": {
+      "target": [
+        "zip",
+        "deb"
+      ],
+      "maintainer": "Alex313031",
+      "vendor": "Alex313031",
+      "synopsis": "Native Chromium NetLog Viewer Application with some modifications.",
+      "category": "Net;Log;Utilities",
+      "executableName": "netlog-viewer",
+      "artifactName": "${productName}_${version}_${arch}.${ext}",
+      "desktop": {
+        "Name": "Thorium NetLog Viewer",
+        "StartupWMClass": "netlog-viewer"
+      }
+    },
+    "win": {
+      "target": [
+        "zip",
+        "nsis"
+      ],
+      "publisherName": "Alex313031",
+      "artifactName": "Thorium_NetLog_Viewer_${version}_${arch}.${ext}"
+    },
+    "nsis": {
+      "shortcutName": "Thorium NetLog Viewer",
+      "artifactName": "Thorium_NetLog_Viewer_Setup_${version}_${arch}.${ext}",
+      "deleteAppDataOnUninstall": true,
+      "uninstallDisplayName": "Thorium NetLog Viewer ${version}"
+    }
+  }
+}
