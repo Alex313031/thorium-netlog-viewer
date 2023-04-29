@@ -42,11 +42,11 @@
       "vendor": "Alex313031",
       "synopsis": "Native Chromium NetLog Viewer Application with some modifications.",
       "category": "Net;Log;Utilities",
-      "executableName": "netlog-viewer",
+      "executableName": "thorium_netlog_viewer",
       "artifactName": "${productName}_${version}_${arch}.${ext}",
       "desktop": {
         "Name": "Thorium NetLog Viewer",
-        "StartupWMClass": "netlog-viewer"
+        "StartupWMClass": "thorium_netlog_viewer"
       }
     },
     "win": {
@@ -55,6 +55,7 @@
         "nsis"
       ],
       "publisherName": "Alex313031",
+      "executableName": "thorium_netlog_viewer",
       "artifactName": "Thorium_NetLog_Viewer_${version}_${arch}.${ext}"
     },
     "nsis": {

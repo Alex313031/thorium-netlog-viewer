@@ -10,6 +10,7 @@ function createWindow () {
     // Preload before renderer processes
     webPreferences: {
       nodeIntegration: true,
+      experimentalFeatures: true,
       webviewTag: true
     }
  });
