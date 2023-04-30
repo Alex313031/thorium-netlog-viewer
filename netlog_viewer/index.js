@@ -1,6 +1,7 @@
-const { app, BrowserWindow } = require('electron')
-  const path = require('path')
-  const url = require('url')
+const { app, BrowserWindow } = require('electron');
+const contextMenu = require('electron-context-menu');
+  const path = require('path');
+  const url = require('url');
   
 function createWindow () {
     let mainWindow = new BrowserWindow({
@@ -24,6 +25,21 @@ function createWindow () {
     mainWindow.setMenuBarVisibility(true);
     mainWindow.setResizable(true);
 }
+
+contextMenu({
+    showSaveImageAs: true,
+    showSelectAll: true,
+    showCopyImage: true,
+    showCopyImageAddress: true,
+    showSaveImageAs: true,
+    showCopyVideoAddress: true,
+    showSaveVideoAs: true,
+    showCopyLink: true,
+    showSaveLinkAs: true,
+    showInspectElement: true,
+    showLookUpSelection: true,
+    showSearchWithGoogle: true
+});
 
 app.whenReady().then(createWindow);
 app.commandLine.appendSwitch('enable-experimental-web-platform-features');

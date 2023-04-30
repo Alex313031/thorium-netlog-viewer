@@ -2,7 +2,7 @@
   "name": "thorium-netlog-viewer",
   "appName": "Thorium NetLog Viewer",
   "applicationId": "ThoriumNetLogViewer",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Native Chromium NetLog Viewer Application with some modifications.",
   "author": "Alex313031",
   "license": "BSD-3-Clause",
@@ -13,6 +13,9 @@
     "clean": "rm -r -f -v node_modules",
     "start": "../node_modules/electron/dist/electron .",
     "winstart": "..\\node_modules\\electron\\dist\\electron ."
+  },
+  "dependencies": {
+    "electron-context-menu": "^3.6.1"
   },
   "devDependencies": {
     "electron": "22.3.7"
