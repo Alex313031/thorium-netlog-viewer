@@ -2,7 +2,7 @@
   "name": "thorium-netlog-viewer",
   "appName": "Thorium NetLog Viewer",
   "applicationId": "ThoriumNetLogViewer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Native Chromium NetLog Viewer Application with some modifications.",
   "author": "Alex313031",
   "license": "BSD-3-Clause",
@@ -26,10 +26,13 @@
     "electronVersion": "22.3.7",
     "extraFiles": [
       {
-        "from": "netlog_viewer/icon64.png"
+        "from": "assets/icon64.png"
+      },
+      {
+        "from": "assets/README.txt"
       }
     ],
-    "appId": "thorium-netlog-viewer",
+    "appId": "com.alex313031.thorium-netlog-viewer",
     "files": [
       "**/*"
     ],
@@ -41,12 +44,14 @@
       "maintainer": "Alex313031",
       "vendor": "Alex313031",
       "synopsis": "Native Chromium NetLog Viewer Application with some modifications.",
-      "category": "Net;Log;Utilities",
-      "executableName": "thorium_netlog_viewer",
+      "category": "Net;Log;Utilities;",
+      "executableName": "thorium-netlog-viewer",
       "artifactName": "${productName}_${version}_${arch}.${ext}",
       "desktop": {
         "Name": "Thorium NetLog Viewer",
-        "StartupWMClass": "thorium_netlog_viewer"
+        "StartupWMClass": "thorium-netlog-viewer",
+        "Keywords": "netlog;thorium;log;",
+        "Icon": "thorium-netlog-viewer"
       }
     },
     "win": {

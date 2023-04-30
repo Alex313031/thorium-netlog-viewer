@@ -3,18 +3,18 @@ const { app, BrowserWindow } = require('electron')
   const url = require('url')
   
 function createWindow () {
-	let mainWindow = new BrowserWindow({
-    width: 1024,
-    height: 768,
-    icon: './icon64.png',
-    // Preload before renderer processes
-    webPreferences: {
-      nodeIntegration: true,
-      experimentalFeatures: true,
-      webviewTag: true
-    }
- });
-  
+    let mainWindow = new BrowserWindow({
+      width: 1024,
+      height: 768,
+      icon: './icon64.png',
+      // Preload before renderer processes
+      webPreferences: {
+        experimentalFeatures: true,
+        nodeIntegration: true,
+        webviewTag: true
+      }
+    });
+
     // Load the index.html of the app.
     mainWindow.loadURL(url.format({
       pathname: path.join(__dirname, 'index.html'),
