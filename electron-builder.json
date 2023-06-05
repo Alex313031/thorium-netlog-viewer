@@ -1,0 +1,53 @@
+{
+  "electronVersion": "22.3.12",
+  "asar": true,
+  "productName": "Thorium NetLog Viewer",
+  "directories": {
+      "app": "netlog_viewer"
+  },
+  "extraFiles": [
+    {
+      "from": "assets/icon64.png"
+    },
+    {
+      "from": "assets/README.txt"
+    }
+  ],
+  "appId": "com.alex313031.thorium-netlog-viewer",
+  "files": [
+    "**/*"
+  ],
+  "linux": {
+    "target": [
+      "zip",
+      "deb"
+    ],
+    "maintainer": "Alex313031",
+    "vendor": "Alex313031",
+    "synopsis": "Native Chromium NetLog Viewer Application with some modifications.",
+    "category": "Network;Log;Utilities;",
+    "executableName": "thorium-netlog-viewer",
+    "artifactName": "thorium-netlog-viewer_${version}_${arch}.${ext}",
+    "desktop": {
+      "Name": "Thorium NetLog Viewer",
+      "StartupWMClass": "thorium-netlog-viewer",
+      "Keywords": "netlog;thorium;log;",
+      "Icon": "thorium-netlog-viewer"
+    }
+  },
+  "win": {
+    "target": [
+      "zip",
+      "nsis"
+    ],
+    "publisherName": "Alex313031",
+    "executableName": "thorium_netlog_viewer",
+    "artifactName": "Thorium_NetLog_Viewer_${version}_${arch}.${ext}"
+  },
+  "nsis": {
+    "shortcutName": "Thorium NetLog Viewer",
+    "artifactName": "Thorium_NetLog_Viewer_Setup_${version}_${arch}.${ext}",
+    "deleteAppDataOnUninstall": true,
+    "uninstallDisplayName": "Thorium NetLog Viewer ${version}"
+  }
+}
