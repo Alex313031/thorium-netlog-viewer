@@ -20,7 +20,8 @@
   "linux": {
     "target": [
       "zip",
-      "deb"
+      "deb",
+      "appimage"
     ],
     "maintainer": "Alex313031",
     "vendor": "Alex313031",
