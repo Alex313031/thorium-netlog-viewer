@@ -1,4 +1,4 @@
-const { app, BrowserWindow, shell, dialog, Menu } = require('electron');
+const { app, BrowserWindow, Menu } = require('electron');
 const contextMenu = require('electron-context-menu');
 const path = require('path');
 const url = require('url');

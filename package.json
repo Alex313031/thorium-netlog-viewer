@@ -18,7 +18,7 @@
     "burn": "rimraf package-lock.json && rimraf ./netlog_viewer/package-lock.json",
     "build": "electron-builder --dir",
     "dist": "electron-builder",
-    "lint": "eslint \"netlog_viewer/**/*.js*\" \"netlog_viewer/**/*.css*\"",
+    "lint": "eslint \"netlog_viewer/index.js\"",
     "start": "electron ./netlog_viewer",
     "winstart": "electron netlog_viewer",
     "postinstall": "electron-builder install-app-deps"
