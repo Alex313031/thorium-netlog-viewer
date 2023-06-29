@@ -42,7 +42,6 @@ function createWindow () {
 }
 
 contextMenu({
-    showSaveImageAs: true,
     showSelectAll: true,
     showCopyImage: true,
     showCopyImageAddress: true,
