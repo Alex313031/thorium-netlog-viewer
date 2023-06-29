@@ -12,12 +12,13 @@
     "node": ">=14"
   },
   "scripts": {
-    "test": "echo \"Error: No test specified\" && exit 1",
+    "test": "npm run lint",
     "clean": "rimraf dist/* && rimraf node_modules && cd netlog_viewer && npm run clean",
     "distclean": "rimraf dist/*",
     "burn": "rimraf package-lock.json && rimraf ./netlog_viewer/package-lock.json",
     "build": "electron-builder --dir",
     "dist": "electron-builder",
+    "lint": "eslint \"netlog_viewer/**/*.js*\" \"netlog_viewer/**/*.css*\"",
     "start": "electron ./netlog_viewer",
     "winstart": "electron netlog_viewer",
     "postinstall": "electron-builder install-app-deps"
@@ -30,6 +31,7 @@
     "asar": "3.2.0",
     "electron": "22.3.14",
     "electron-builder": "23.6.0",
+    "eslint": "8.41.0",
     "rimraf": "4.4.1"
   }
 }
