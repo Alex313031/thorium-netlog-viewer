@@ -1,4 +1,5 @@
 const { app, BrowserWindow, Menu } = require('electron');
+const electronLog = require('electron-log');
 const contextMenu = require('electron-context-menu');
 const path = require('path');
 const url = require('url');
@@ -56,6 +57,22 @@ contextMenu({
 });
 
 app.whenReady().then(createWindow);
+
+// Get app version from package.json
+var appVersion = app.getVersion();
+// Get Electron versions
+var electronVersion = process.versions.electron;
+var chromeVersion = process.versions.chrome;
+var nodeVersion = process.versions.node;
+var v8Version = process.versions.v8;
+
+electronLog.info('Welcome to Thorium NetLog Viewer!');
+electronLog.info('App Version: ' + [ appVersion ]);
+electronLog.info('Electron Version: ' + [ electronVersion ]);
+electronLog.info('Chromium Version: ' + [ chromeVersion ]);
+electronLog.info('NodeJS Version: ' + [ nodeVersion ]);
+electronLog.info('V8 Version: ' + [ v8Version ]);
+
 // app.commandLine.appendSwitch('enable-experimental-web-platform-features');
 app.commandLine.appendSwitch('allow-file-access-from-files');
 app.commandLine.appendSwitch('enable-local-file-accesses');
