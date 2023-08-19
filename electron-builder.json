@@ -1,5 +1,5 @@
 {
-  "electronVersion": "22.3.18",
+  "electronVersion": "22.3.21",
   "asar": true,
   "productName": "Thorium NetLog Viewer",
   "directories": {
