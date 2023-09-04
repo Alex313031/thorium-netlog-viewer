@@ -1,9 +1,13 @@
 {
-  "electronVersion": "22.3.21",
+  "electronVersion": "22.3.23",
   "asar": true,
   "productName": "Thorium NetLog Viewer",
+  "appId": "com.alex313031.thorium-netlog-viewer",
+  "generateUpdatesFilesForAllChannels": false,
   "directories": {
-      "app": "netlog_viewer"
+      "app": "netlog_viewer",
+      "buildResources": "build",
+      "output": "dist"
   },
   "extraFiles": [
     {
@@ -13,7 +17,6 @@
       "from": "assets/README.txt"
     }
   ],
-  "appId": "com.alex313031.thorium-netlog-viewer",
   "files": [
     "**/*"
   ],
@@ -39,16 +42,20 @@
   "win": {
     "target": [
       "zip",
-      "nsis"
+      "nsis",
+      "portable"
     ],
     "publisherName": "Alex313031",
     "executableName": "thorium_netlog_viewer",
-    "artifactName": "Thorium_NetLog_Viewer_${version}_${arch}.${ext}"
+    "artifactName": "thorium_netLog_viewer_win64_${version}_${arch}.${ext}"
   },
   "nsis": {
     "shortcutName": "Thorium NetLog Viewer",
-    "artifactName": "Thorium_NetLog_Viewer_Setup_${version}_${arch}.${ext}",
+    "artifactName": "thorium_netLog_viewer_setup_${version}_${arch}.${ext}",
     "deleteAppDataOnUninstall": true,
     "uninstallDisplayName": "Thorium NetLog Viewer ${version}"
+  },
+  "portable": {
+    "artifactName": "thorium_netLog_viewer_portable_${version}_${arch}.${ext}"
   }
 }

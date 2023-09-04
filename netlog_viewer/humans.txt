@@ -19,7 +19,7 @@
 
 /* WEBPAGE */
 
-	Last update: 2023/07/07
+	Last update: 2023/09/04
 	Language: English
 	Doctype: HTML5, CSS, WebGL
 	IDE: Geany
