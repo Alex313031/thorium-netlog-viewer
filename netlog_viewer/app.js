@@ -107,7 +107,7 @@ function createWindow () {
       { role: 'toggleDevTools' },
       {
         label: 'Open Electron DevTools',
-        accelerator: process.platform === 'darwin' ? 'CmdorCtrl+Shift+F12' : 'F12',
+        accelerator: isMac ? 'CmdorCtrl+Shift+F12' : 'F12',
         click(item, focusedWindow) {
           focusedWindow.openDevTools({ mode: 'detach' });
         }
