@@ -66,6 +66,14 @@ function createWindow () {
           electronLog.info('Navigated forward');
         }
       },
+      {
+        label: 'Close Window',
+        accelerator: 'CmdorCtrl+W',
+        click(item, focusedWindow) {
+          if (focusedWindow) focusedWindow.close();
+          electronLog.info('Closed a window');
+        }
+      },
       { type: 'separator' },
       {
         label: 'Relaunch',
