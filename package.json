@@ -2,12 +2,12 @@
   "name": "thorium-netlog-viewer",
   "appName": "Thorium NetLog Viewer",
   "applicationId": "ThoriumNetLogViewer",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "Native Chromium NetLog Viewer Application with some modifications.",
   "author": "Alex313031",
   "license": "BSD-3-Clause",
   "repository": "https://github.com/Alex313031/Thorium_NetLog_Viewer",
-  "main": "./netlog_viewer/index.js",
+  "main": "./netlog_viewer/app.js",
   "engines": {
     "node": ">=14"
   },
