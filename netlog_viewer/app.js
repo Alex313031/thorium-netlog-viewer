@@ -27,6 +27,7 @@ function createWindow () {
     maximizable: true,
     width: 1024,
     height: 768,
+    useContentSize: true,
     icon: isWin ? path.join(__dirname, 'icon.ico') : path.join(__dirname, 'icon64.png'),
     darkTheme: true,
     webPreferences: {
@@ -111,6 +112,15 @@ function createWindow () {
     label: 'View',
     submenu: [
       { role: 'reload' },
+      {
+        label: 'Reload F5',
+        accelerator:  'F5',
+        visible: false,
+        acceleratorWorksWhenHidden: true,
+        click(item, focusedWindow) {
+          if (focusedWindow) focusedWindow.webContents.reload();
+        }
+      },
       { role: 'forceReload' },
       { role: 'toggleDevTools' },
       {
@@ -135,7 +145,7 @@ function createWindow () {
       { label: 'App v' + app.getVersion(), enabled: false },
       { label: 'Created by Alex313031',
         click() {
-          new BrowserWindow({width: 1024, height: 768}).loadURL('https://github.com/Alex313031/Thorium_NetLog_Viewer#readme');
+          new BrowserWindow({width: 1024, height: 768, useContentSize: true}).loadURL('https://github.com/Alex313031/Thorium_NetLog_Viewer#readme');
         }
       },
       { type: 'separator' },
@@ -143,7 +153,7 @@ function createWindow () {
         label: 'View Humans.txt',
         accelerator: 'CmdorCtrl+Alt+Shift+H',
         click() {
-          const humansWindow = new BrowserWindow({width: isWin ? 400 : 400, height: isWin ? 500 : 480, title: "humans.txt", darkTheme: true});
+          const humansWindow = new BrowserWindow({width: 400, height: 408, useContentSize: true, title: "humans.txt", darkTheme: true});
           humansWindow.loadFile('./humans.txt');
           electronLog.info('Opened humans.txt :)');
         }
@@ -152,8 +162,8 @@ function createWindow () {
         label: 'View License',
         accelerator: 'CmdorCtrl+Alt+Shift+L',
         click() {
-          const humansWindow = new BrowserWindow({width: isWin ? 532 : 532, height: isWin ? 642 : 624, title: "License", darkTheme: true});
-          humansWindow.loadFile('./license.md');
+          const licenseWindow = new BrowserWindow({width: 532, height: 632, useContentSize: true, title: "License", darkTheme: true});
+          licenseWindow.loadFile('./license.md');
           electronLog.info('Opened license.md');
         }
       },
@@ -162,8 +172,9 @@ function createWindow () {
         accelerator: 'CmdorCtrl+Alt+A',
         click() {
           const aboutWindow = new BrowserWindow({
-            width: isWin ? 350 : 350,
-            height: isWin ? 350 : 330,
+            width: 350,
+            height: 280,
+            useContentSize: true,
             title: "About App",
             icon: isWin ? path.join(__dirname, 'icon.ico') : path.join(__dirname, 'icon64.png'),
             darkTheme: true,
@@ -221,6 +232,7 @@ contextMenu({
         title: 'New Window',
         width: 1024,
         height: 768,
+        useContentSize: true,
         webPreferences: {
           nodeIntegration: false,
           nodeIntegrationInWorker: false,
@@ -236,6 +248,7 @@ contextMenu({
       });
       const toURL = parameters.linkURL;
       newWin.loadURL(toURL);
+      electronLog.info('Opened New Window');
     }
   }]
 });
