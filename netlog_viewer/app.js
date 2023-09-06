@@ -51,13 +51,30 @@ function createWindow () {
     label: 'App',
     submenu: [
       {
+        label: 'Go Back',
+        accelerator: 'Alt+Left',
+        click(item, focusedWindow) {
+          if (focusedWindow) focusedWindow.webContents.goBack();
+          electronLog.info('Navigated back');
+        }
+      },
+      {
+        label: 'Go Forward',
+        accelerator: 'Alt+Right',
+        click(item, focusedWindow) {
+          if (focusedWindow) focusedWindow.webContents.goForward();
+          electronLog.info('Navigated forward');
+        }
+      },
+      { type: 'separator' },
+      {
         label: 'Relaunch',
         click() {
+          electronLog.warn('Restarting App...');
           app.relaunch();
           app.quit();
         }
       },
-      { type: 'separator' },
       {
         label: 'Quit',
         accelerator: 'CmdOrCtrl+Q',
@@ -82,7 +99,26 @@ function createWindow () {
     ]
   },
   {
-    role: 'viewMenu'
+    role: 'viewMenu',
+    label: 'View',
+    submenu: [
+      { role: 'reload' },
+      { role: 'forceReload' },
+      { role: 'toggleDevTools' },
+      {
+        label: 'Open Electron DevTools',
+        accelerator: process.platform === 'darwin' ? 'CmdorCtrl+Shift+F12' : 'F12',
+        click(item, focusedWindow) {
+          focusedWindow.openDevTools({ mode: 'detach' });
+        }
+      },
+      { type: 'separator' },
+      { role: 'resetZoom' },
+      { role: 'zoomIn' },
+      { role: 'zoomOut' },
+      { type: 'separator' },
+      { role: 'togglefullscreen' }
+    ]
   },
   {
     role: 'help',
@@ -94,9 +130,7 @@ function createWindow () {
           new BrowserWindow({width: 1024, height: 768}).loadURL('https://github.com/Alex313031/Thorium_NetLog_Viewer#readme');
         }
       },
-      {
-        type: 'separator'
-      },
+      { type: 'separator' },
       {
         label: 'View Humans.txt',
         accelerator: 'CmdorCtrl+Alt+Shift+H',
