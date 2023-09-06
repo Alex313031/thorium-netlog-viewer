@@ -155,7 +155,7 @@ function createWindow () {
         click() {
           const aboutWindow = new BrowserWindow({
             width: isWin ? 350 : 350,
-            height: isWin ? 380 : 350,
+            height: isWin ? 360 : 330,
             title: "About App",
             icon: isWin ? path.join(__dirname, 'icon.ico') : path.join(__dirname, 'icon64.png'),
             darkTheme: true,
