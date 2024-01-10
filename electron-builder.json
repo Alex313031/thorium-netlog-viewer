@@ -9,16 +9,14 @@
       "buildResources": "build",
       "output": "dist"
   },
+  "files": [ "**/*" ],
   "extraFiles": [
     {
-      "from": "assets/icon64.png"
+      "from": "assets/icon.png"
     },
     {
       "from": "assets/README.txt"
     }
-  ],
-  "files": [
-    "**/*"
   ],
   "linux": {
     "target": [
@@ -42,8 +40,8 @@
   "win": {
     "target": [
       "zip",
-      "nsis",
-      "portable"
+      "portable",
+      "nsis"
     ],
     "publisherName": "Alex313031",
     "executableName": "thorium_netlog_viewer",
@@ -52,10 +50,22 @@
   "nsis": {
     "shortcutName": "Thorium NetLog Viewer",
     "artifactName": "thorium_netLog_viewer_setup_${version}_${arch}.${ext}",
+    "uninstallDisplayName": "Thorium NetLog Viewer ${version}",
     "deleteAppDataOnUninstall": true,
-    "uninstallDisplayName": "Thorium NetLog Viewer ${version}"
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true
   },
   "portable": {
     "artifactName": "thorium_netLog_viewer_portable_${version}_${arch}.${ext}"
+  },
+  "mac": {
+    "category": "public.app-category.developer-tools",
+    "icon": "build/icon.icns",
+    "darkModeSupport": true,
+    "artifactName": "thorium_netLog_viewer_${version}_macos_${arch}.${ext}",
+    "target": [
+      "dmg",
+      "zip"
+    ]
   }
 }
