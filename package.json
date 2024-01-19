@@ -2,7 +2,7 @@
   "name": "thorium-netlog-viewer",
   "appName": "Thorium NetLog Viewer",
   "applicationId": "ThoriumNetLogViewer",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Native Chromium NetLog Viewer Application with some modifications.",
   "author": "Alex313031",
   "license": "BSD-3-Clause",
