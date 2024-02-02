@@ -3,6 +3,7 @@
   "asar": true,
   "productName": "Thorium NetLog Viewer",
   "appId": "com.alex313031.thorium-netlog-viewer",
+  "copyright": "Copyright © 2024 Alex313031",
   "generateUpdatesFilesForAllChannels": false,
   "directories": {
       "app": "netlog_viewer",

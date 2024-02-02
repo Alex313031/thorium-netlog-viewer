@@ -7,6 +7,7 @@
   "author": "Alex313031",
   "license": "BSD-3-Clause",
   "repository": "https://github.com/Alex313031/Thorium_NetLog_Viewer",
+  "copyright": "Copyright © 2024 Alex313031",
   "main": "./app.js",
   "engines": {
     "node": ">=14"
